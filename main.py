@@ -13,7 +13,9 @@ EMBEDDING_MODEL = "text-embedding-3-small"
 CHAT_COMPLETION_MODEL = "gpt-4o-mini"  # or gpt-3.5-turbo
 
 app = FastAPI()
-
+@app.get("/")
+def read_root():
+    return {"message": "HelloWorld!"}
 # ---------------------------
 # Pydantic models
 # ---------------------------
