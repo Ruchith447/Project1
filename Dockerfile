@@ -11,8 +11,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy app source code and data files
 COPY main.py .
-COPY content.json .
-COPY discourse.json .
+COPY cleaned-content.json .
+COPY cleaned-discourse.json .
 
 # Expose port 80 (standard HTTP port)
 EXPOSE 80
