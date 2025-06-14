@@ -18,4 +18,5 @@ COPY cleaned-discourse.json .
 EXPOSE 80
 
 # Run the app with Uvicorn, binding to 0.0.0.0 to accept external connections
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "80"]
+CMD uvicorn main:app --host 0.0.0.0 --port $PORT
+
