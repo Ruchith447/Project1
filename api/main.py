@@ -177,7 +177,7 @@ def semantic_search(query_embedding: List[float], top_k: int = 5) -> List[Docume
 # FastAPI endpoint
 # ---------------------------
 
-@app.post("/api/", response_model=AnswerResponse)
+@app.post("/", response_model=AnswerResponse)
 async def answer_question(req: QuestionRequest):
     question = req.question.strip()
     if not question:
